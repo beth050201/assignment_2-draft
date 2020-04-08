@@ -16,15 +16,22 @@
 <body>
     <!--navigation-->
         <nav>
-            <h1>Bethany Wilson</h1>
-                <ul>
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="portfolio.html" >Portfolio</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  <!-- linking the pages of the navigation -->
-                </ul>
-            </nav>
+            <div class="title">
+                <h1>Bethany Wilson</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="portfolio.html">Portfolio</a></li>  
+                <li><a href="cv.html">CV</a></li>  
+                <li><a href="index.html">Contact</a></li>  
+            </ul>
+            <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+        </nav>
+
 <!--grid layout for the index page-->
     <section class="content1">
         <!--https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout  this website has been used to create the grids on all pages-->
@@ -44,23 +51,24 @@
             <p>Also this site allows you to see my CV and to contact me in case you have any enquiries</p>
          </div>
 
-        <div class="three">
-        <h2>My skills</h2>
-        <p> I have a range of skills which includes HTML5, CSS, Java and JavaScript</p>
-            <br>
-        <p>Click <a href="cv.html">here</a> for more information about my experience and skills. </p>
-        </div>
+         <div class="three">
+          <h2>My skills</h2>
+          <p> I have a range of skills which includes HTML5, CSS, Java and JavaScript</p>
+              <br>
+          <p>Click <a href="cv.html">here</a> for more information about my experience and skills. </p>
+          </div>
     </section> 
 <!--footer containing the social media links-->
     <footer> 
             <!--icons open in a new tab-->
         <a href="https://github.com/beth050201" target="_blank"><img src="assets/GitHub-Mark-32px.png" alt="GitHub"></a>
-        <a href="https://twitter.com/beth___wilson" target="_blank"><img src="assets/Twitter_Social_Icon_Rounded_Square_Color.png" alt="Twitter" width="32px" height="32px"></a>
+        <i class="fab fa-twitter"></i>
         <!-- git hub icon  https://github.com/logos -->
         <!-- Twitter icon  https://about.twitter.com/en_gb/company/brand-resources.html width and height-->
         
     </footer>
-    <!-- bootstrap js links-->
+
+    <!-- bootstrap JavaScript links-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

@@ -3,6 +3,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing:border-box;
     
   }
   
@@ -52,53 +53,69 @@
   
   /* nav CSS used from nile starter code and then admended to fit style of the website*/
   nav { 
+      display: flex;
       width: 100%;
       font-family: 'Raleway', sans-serif;
-      float: right;
-      flex-direction: row;
-      justify-content: space-between;
-      display: flex;
-      padding-top: 25px;
-      padding-right: 25px;
+      /* float: right;
+      flex-direction: row; */
+      justify-content: space-around;
+      align-items: center;
+      min-height: 8vh;
       background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
       /*https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient  used this website to find out the basics on how to create gradient effect*/
     }
-    
-    ul {
-      overflow: auto;
-      list-style-type: none;
-    }
-   
-    li {
-      height: 25px;
-      float: left;
-      margin-right: 0px;
-      padding: 0 20px;
-    }
-    
-    li:last-child {
-      border-right: none;
-    }
-   
-   li a {
-     /* removing the decoration of the text so that it is only the words with no addtional features */
-      text-decoration: none;
+
+    .title{
       color: white;
-      /*change of font size*/
-      font: 20px/1 'Raleway', sans-serif;
-      /* text-transform: uppercase; */
-      transition: all 0.5s ease;
+      letter-spacing: 2px;
+      font-size: 40px;
     }
-     
-    /* hover added similar design to one of the websites i used for inspiration  */
-    li a:hover {
-      color: rgba(37, 91, 161, 0.5);
+
+    .nav-links{
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
     }
-  
-    li.active a {
-      font-weight: bold;
-      color: #333;
+
+    .nav-links li{
+      list-style: none;
     }
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-size: 20px;
+    
+    }
+
+    .burger{
+      display: none;
+    }
+
+    .burger div{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3 ease;
+    }
+
+    .nav-active{
+      transform: translateX(0%);
+    }
+
+    .toggle .line1{
+      transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .toggle .line2{
+      opacity: 0;
+    }
+
+    .toggle .line3{
+      transform: rotate(45deg) translate(-5px,-6px);
+    }
+    
   
     body{
       display: grid;
@@ -360,16 +377,80 @@
       width: 100%;
       padding-left: 25px;
   }
+
+  /* animation for the navigation*/
+  @keyframes navLinkFade{
+    from{
+          opacity: 0;
+          transform: translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @media screen and (max-width: 1212px){
+    .nav-links{
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+    }
+  } 
+
+  @media screen and (max-width: 852px){
+    .nav-links{
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+    }
+  } 
+
   
+  @media screen and (max-width: 768px){
+    /*removes scroll*/
+    body{
+     /* overflow-x: hidden;*/
+    }
+    /*creating burger */
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      /*moves nav off the screen*/
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+      opacity: 0;
+    }
+
+    .burger{
+      display: block;
+      cursor: pointer;
+    }
+  }
+
   /* media query for phone  */
-  @media only screen and (max-width: 375px){
+  @media screen and (max-width: 375px){
     
     img{
       padding-top: 5px;
     }
     
-    .nav {
-      float: right;
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
     }
   
     h1{
@@ -491,3 +572,5 @@
     }
   
   }
+
+  
