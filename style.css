@@ -56,8 +56,6 @@
       display: flex;
       width: 100%;
       font-family: 'Raleway', sans-serif;
-      /* float: right;
-      flex-direction: row; */
       justify-content: space-around;
       align-items: center;
       min-height: 8vh;
@@ -85,7 +83,6 @@
       text-decoration: none;
       letter-spacing: 3px;
       font-size: 20px;
-    
     }
 
     .burger{
@@ -100,23 +97,6 @@
     transition: all 0.3 ease;
     }
 
-    .nav-active{
-      transform: translateX(0%);
-    }
-
-    .toggle .line1{
-      transform: rotate(-45deg) translate(-5px,6px);
-    }
-
-    .toggle .line2{
-      opacity: 0;
-    }
-
-    .toggle .line3{
-      transform: rotate(45deg) translate(-5px,-6px);
-    }
-    
-  
     body{
       display: grid;
       flex-direction: column; 
@@ -160,6 +140,7 @@
       padding: 5em;
       text-align: center;
       padding: 10px 50px 20px;
+    
     }
   
     .two {
@@ -185,7 +166,9 @@
   .container {
     width: 90rem; 
     margin: 2rem auto;
+    
   }
+
   
   .portfolio-item  {
     max-width: 100%;
@@ -234,7 +217,7 @@
     opacity: 1;
   }
   
-  /* syling the hover text on the images */
+  /* styling the hover text on the images */
   .text {
     color: white;
     font-size: 2.5em;
@@ -410,7 +393,7 @@
   @media screen and (max-width: 768px){
     /*removes scroll*/
     body{
-     /* overflow-x: hidden;*/
+      overflow-x: hidden;
     }
     /*creating burger */
     .nav-links {
@@ -434,7 +417,22 @@
 
     .burger{
       display: block;
-      cursor: pointer;
+    }
+
+    .nav-active{
+      transform: translateX(0%);
+    }
+
+    .toggle .line1{
+      transform: rotate(-45deg) translate(-5px,6px);
+    }
+
+    .toggle .line2{
+      opacity: 0;
+    }
+
+    .toggle .line3{
+      transform: rotate(45deg) translate(-5px,-6px);
     }
   }
 
@@ -445,13 +443,6 @@
       padding-top: 5px;
     }
     
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      background: linear-gradient(rgb(172, 189, 214), rgb(162, 201, 233));
-    }
   
     h1{
       padding: 5px;
